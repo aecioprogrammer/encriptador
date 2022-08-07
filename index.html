@@ -21,7 +21,9 @@
             cols="30"
             rows="10"
             placeholder="Digite seu texto"
-          ></textarea>
+          >
+Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequatur perferendis commodi dolore cum sed, eveniet dolorum repudiandae blanditiis. Minus nam necessitatibus repellendus accusamus odio expedita quasi vero voluptas? Facere.</textarea
+          >
         </div>
 
         <p id="encryptParagraph">
@@ -29,36 +31,33 @@
         </p>
 
         <div id="buttonsDiv">
-          <button>Criptografar</button>
-          <button>Descriptografar</button>
+          <button id="encryptButton">Criptografar</button>
+          <button id="decryptButton">Descriptografar</button>
         </div>
-
-        <footer>
-          <p>
-            Desenvolvido por Aécio de Oliveira - Programador Iniciante - 2022
-          </p>
-        </footer>
       </div>
 
       <div id="decryptDiv">
-        <textarea
-          name="textToDecrypt"
-          id="textToDecrypt"
-          cols="30"
-          rows="10"
-        ></textarea>
+        <textarea name="textToDecrypt" id="textToDecrypt" cols="30" rows="10">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequatur perferendis commodi dolore cum sed, eveniet dolorum repudiandae blanditiis. Minus nam necessitatibus repellendus accusamus odio expedita quasi vero voluptas? Facere.</textarea
+        >
         <figure>
-          <img src="./imagens/pessoa.png" alt="" />
+          <img class="disabledElement" src="./imagens/pessoa.png" alt="" />
         </figure>
 
-        <div id="decryptInstructions">
+        <div id="decryptInstructions" class="disabledElement">
           <h1>Nenhuma mensagem encontrada</h1>
           <p id="decryptParagraph">
             Digite um texto que você deseja criptografar ou descriptografar
           </p>
-          <button id="copyButton">Copiar</button>
         </div>
+        <button id="copyButton">Copiar</button>
       </div>
     </main>
+    <footer>
+      <p>
+        &copy;Desenvolvido por Aécio de Oliveira - Programador Iniciante - 2022
+      </p>
+    </footer>
+    <script src="./js/jscript.js"></script>
   </body>
 </html>
