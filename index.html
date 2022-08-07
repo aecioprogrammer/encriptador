@@ -21,9 +21,7 @@
             cols="30"
             rows="10"
             placeholder="Digite seu texto"
-          >
-Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequatur perferendis commodi dolore cum sed, eveniet dolorum repudiandae blanditiis. Minus nam necessitatibus repellendus accusamus odio expedita quasi vero voluptas? Facere.</textarea
-          >
+          ></textarea>
         </div>
 
         <p id="encryptParagraph">
@@ -37,20 +35,25 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequatur perferen
       </div>
 
       <div id="decryptDiv">
-        <textarea name="textToDecrypt" id="textToDecrypt" cols="30" rows="10">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequatur perferendis commodi dolore cum sed, eveniet dolorum repudiandae blanditiis. Minus nam necessitatibus repellendus accusamus odio expedita quasi vero voluptas? Facere.</textarea
-        >
+        <textarea
+          name="textToDecrypt"
+          id="textToDecrypt"
+          class="disabledElement"
+          cols="30"
+          rows="10"
+          readonly="true"
+        ></textarea>
         <figure>
-          <img class="disabledElement" src="./imagens/pessoa.png" alt="" />
+          <img id="decryptImage" src="./imagens/pessoa.png" alt="" />
         </figure>
 
-        <div id="decryptInstructions" class="disabledElement">
+        <div id="decryptMessages">
           <h1>Nenhuma mensagem encontrada</h1>
           <p id="decryptParagraph">
             Digite um texto que você deseja criptografar ou descriptografar
           </p>
         </div>
-        <button id="copyButton">Copiar</button>
+        <button id="copyButton" class="disabledElement">Copiar</button>
       </div>
     </main>
     <footer>
