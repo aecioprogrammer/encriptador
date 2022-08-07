@@ -146,3 +146,61 @@ footer {
   left: 168px;
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  #decryptImage {
+    display: none;
+  }
+
+  #encryptDiv {
+    margin-left: 40px;
+    top: 0;
+  }
+
+  #decryptDiv {
+    width: 618px;
+    height: fit-content;
+    justify-content: center;
+    /* margin-left: 40px;
+    margin-right: 40px;
+    padding: 32px; */
+    left: 40px;
+  }
+
+  #textToDecrypt {
+    width: auto;
+    height: fit-content;
+  }
+
+  button {
+    width: 332px;
+    height: 67px;
+
+    footer {
+      left: 0;
+    }
+  }
+
+  @media (max-width: 500px) {
+
+    main {
+      justify-content: center;
+    }
+    #buttonsDiv {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #decryptDiv {
+      width: 268px;
+  }
+
+  footer {
+    left: 0;
+  }
+}
