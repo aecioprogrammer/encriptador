@@ -10,8 +10,8 @@
 
   <body>
     <main>
-      <figure id="aluraLogo">
-        <img src="./imagens/logo.png" alt="logo alura" />
+      <figure>
+        <img id="logoAlura" src="./imagens/logo.png" alt="logo alura" />
       </figure>
       <div id="encryptDiv">
         <div>
@@ -24,9 +24,11 @@
           ></textarea>
         </div>
 
-        <p id="encryptParagraph">
-          <span>!</span> Apenas letras minúsculas sem acento
-        </p>
+        <div>
+          <p id="encryptParagraph">
+            <span>!</span> Apenas letras minúsculas sem acento
+          </p>
+        </div>
 
         <div id="buttonsDiv">
           <button id="encryptButton">Criptografar</button>
@@ -43,8 +45,8 @@
           rows="10"
           readonly="true"
         ></textarea>
-        <figure>
-          <img id="decryptImage" src="./imagens/pessoa.png" alt="" />
+        <figure id="decryptImage">
+          <img src="./imagens/pessoa.png" alt="" />
         </figure>
 
         <div id="decryptMessages">
@@ -55,12 +57,14 @@
         </div>
         <button id="copyButton" class="disabledElement">Copiar</button>
       </div>
+      <footer>
+        <p>
+          &copy;Desenvolvido por Aécio de Oliveira - Programador Iniciante -
+          2022
+        </p>
+      </footer>
     </main>
-    <footer>
-      <p>
-        &copy;Desenvolvido por Aécio de Oliveira - Programador Iniciante - 2022
-      </p>
-    </footer>
+
     <script src="./js/jscript.js"></script>
   </body>
 </html>
