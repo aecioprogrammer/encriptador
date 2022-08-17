@@ -21,8 +21,7 @@ body {
     margin: 0px 16px 40px 16px;
   }
 
-  textarea {
-    display: block;
+  textarea {    
     font-size: 32px;
     /* position: relative; */
     width: 343px;
