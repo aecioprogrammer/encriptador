@@ -5,30 +5,34 @@ html {
 }
 
 body {
-  display: flex;
+  /* display: flex; */
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   text-align: center;
   background-color: #e5e5e5;
+  box-sizing: border-box;
 }
 
   main {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 0px 16px 40px 16px;
   }
 
   textarea {
+    display: block;
     font-size: 32px;
     /* position: relative; */
     width: 343px;
+    margin-top: 152px;
     border: none;
     outline: none;
     background-color: transparent;
     outline: none;
-  }
+    color: #0a3871;    
+      }
 
   textarea::placeholder {
     color: #0a3871;
@@ -51,6 +55,10 @@ body {
     cursor: pointer;
   }
 
+  #copyButton {
+    width: 230px
+  }
+
   p {
     height: 18px;
     font-size: 12px;
@@ -61,8 +69,10 @@ body {
 
   #encryptParagraph {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     width: 343px;
+    margin-left: 20px;
+    margin-bottom: 16px;
   }
 
   span {
@@ -70,20 +80,28 @@ body {
     width: 16px;
     height: 16px;
     font-size: 12px;
-    left: 0;
     border-radius: 50%;
     background-color: #495057;
     color: white;
   }
 
   #logoAlura {
+    position: absolute;
+    width: 31.09px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+    padding-bottom: 84px;
+  }
+
+  /* #logoAlura {
     display: flex;
     justify-content: flex-start;
     width: 31.09px;
     height: 48px;
     position: relative;
     padding-bottom: 80px;
-  }
+  } */
 
   #decryptImage {
     display: none;
@@ -95,18 +113,20 @@ body {
 
   #decryptDiv {
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 32px;
-    position: relative;
-    top: 8px;
-    height: 186px;
-    margin: 40px;
+    align-items: center;    
+    /* position: relative;
+    top: 8px; */
+    min-height: fit-content;
+    width: 343px;
     padding: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     background: #ffffff;
+    margin: 40px 16px;
+    
   }
 
   h1 {
@@ -115,92 +135,100 @@ body {
     line-height: 120%;
   }
 
+  #decryptDiv {
+    
+  }
+
   #textToDecrypt {
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
     color: #495057;
+    
   }
 
 
 @media (min-width: 768px) {
   main {
-    margin: 40px 16px 40px 16px;   
-  }
+    margin: 16px 40px 16px 40px;    
+    }
 
   #logoAlura {
     margin-bottom: 120px;
     margin-top: 73.42px;
   }
 
-  textarea {
+  #textToEncrypt  {
+    display: block;
     font-size: 32px;
     line-height: 48px;
-
-    /* position: relative; */
     width: 688px;
+    margin-top: 240px;    
+    padding: 0px;    
+  }
+
+  #encryptParagraph {   
+    margin-left: 0;
+    margin-bottom: 16px;
   }
 
   button {
     width: 332px;
-    margin: 0px 12px;
+    margin: 0px;
   }
 
   #buttonsDiv {
-    margin: 16px 40px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+    
   }
 
   #decryptDiv {
+    flex-direction: start;
+    margin-top: 64px;
+    margin-left: 0;
     width: 688px;
     height: 133px;
+    padding: 0px;
+    
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1000px) {   
 
-   main {
-    flex-direction: row;
-    background-color: lightcyan;
-  }
+main {  
+  flex-direction: row;  
+  justify-content: flex-start;
+  gap: 80px;  
+  padding: 0px;
+  margin: 0px;
+}
 
 #logoAlura {
-  margin-top: 40px;
-  margin-left:84px;
+  position: absolute;
+  width: 31.09px;
+  height: 48px;
+  left: 84px;
+  top: 0;
 }
 
-#encryptDiv {
-  margin-top: 168px;
+#textToEncrypt {
+  width: 680px;
+  height: 600px;
+  font-size: 32px;
+  line-height: 48px;
+  /* Dark blue/dark-blue-300 */  
+    margin-top: 168px;
 }
 
-#decryptdiv {
-
-  height: 944px;
-  width: 400px;
-  background-color: blue;
+button {  
+  width: 328px; 
 }
 
-#decryptImage {
-  display: contents;
+#buttonsDiv, #encryptParagraph, #textToEncrypt {
+  margin-left: 120px;
 }
-
-#buttonsDiv {
-  display: flex;
-  flex-direction: row;
-  
-}
-}
-
-/* 
-#buttonsDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 8px;
-}
-
-
-
-
 
 #decryptMessages {
   width: 336px;
@@ -210,20 +238,13 @@ body {
   font-size: 16px;
 }
 
-h1 {
-  height: 58px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 120%;
+#decryptImage {
+  display: block;
 }
 
-#textToEncrypt {
-  width: 680px;
-  height: 600px;
-  font-size: 32px;
-  line-height: 150%;
-
-  color: #0a3871;
+h1 {
+  height: 58px;
+  
 }
 
 #textToDecrypt {
@@ -231,101 +252,19 @@ h1 {
   font-size: 24px;
   line-height: 150%;
   color: #495057;
+  margin-top: 32px;
 }
 
-#encryptDiv {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  top: 288px;
+#decryptDiv {   
+  width: 400px;
+  height: 944px; 
+  margin-top: 40px; 
 }
-
-
-
 
 footer {
   position: relative;
-  left: 168px;
-  text-align: left;
-} */
-
-/* @media (max-width: 768px) {
-  main {
-    flex-direction: column;
-    justify-content: center;
-    width: 100vh;
-    background-color: lightcyan;
-    padding: 0;
-    margin: 0;
-  }
-
-  #decryptImage {
-    display: none;
-  }
-
-  #encryptDiv {
-    width: 100%;
-
-    top: 0;
-  }
-
-  #decryptDiv1 {
-    display: flex;
-    width: max-content;
-
-    height: fit-content;
-    justify-content: center;
-
-    left: 40px;
-  }
-
-  #decryptDiv {
-    margin: 10px 10px 10px 40px;
-    top: 0px;
-    padding: 0px;
-    width: auto;
-    height: auto;
-    background-color: yellow;
-  }
-
-  #decryptMessages {
-    width: 300px;
-    height: 100%;
-  }
-
-  #textToDecrypt {
-    width: 100%;
-    height: 100%;
-  }
-
-  button {
-    width: 332px;
-    height: 67px;
-  }
-
-  footer {
-    left: 0;
-  }
+  margin: auto;
+  text-align: center;
+}
 }
 
-@media (max-width: 500px) {
-  main {
-    width: 100vh;
-    justify-content: center;
-  }
-  #buttonsDiv {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #decryptDiv {
-    width: 268px;
-  }
-
-  footer {
-    left: 0;
-  } 
-}*/

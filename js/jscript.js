@@ -17,20 +17,24 @@ function disableElements() {
 
   const text = encryptTextAreaValue.value;
 
-  console.log(text.length, text);
+  console.log(text.length>0);
 
-  if (!text == "") {
-    console.log("exibe imagem");
+  if (text.length) {
+    console.log("não exibe imagem");
     imageDecrypt.classList.add("disabledElement");
     divDecryptMessages.classList.add("disabledElement");
     textDecryptArea.classList.remove("disabledElement");
     buttonCopy.classList.remove("disabledElement");
+    
+    
   } else {
-    console.log("não exibe imagem");
+    console.log("exibe imagem");   
+
     imageDecrypt.classList.remove("disabledElement");
     divDecryptMessages.classList.remove("disabledElement");
     textDecryptArea.classList.add("disabledElement");
     buttonCopy.classList.add("disabledElement");
+    
   }
 }
 
@@ -121,7 +125,7 @@ function reset() {
   let decryptTextArea = document.querySelector("#textToDecrypt");
   encryptTextArea.value = "";
   decryptTextArea.value = "";
-  disableElements();
+  // disableElements();
 }
 
 start();
