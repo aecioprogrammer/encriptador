@@ -14,159 +14,158 @@ body {
   box-sizing: border-box;
 }
 
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0px 16px 40px 16px;
-  }
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 16px 40px 16px;
+}
 
-  textarea {    
-    font-size: 32px;
-    /* position: relative; */
-    width: 343px;
-    margin-top: 152px;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    outline: none;
-    color: #0a3871;    
-      }
+textarea {
+  font-size: 32px;
+  /* position: relative; */
+  width: 343px;
+  margin-top: 152px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #0a3871;
+}
 
-  textarea::placeholder {
-    color: #0a3871;
-  }
+textarea::placeholder {
+  color: #0a3871;
+}
 
-  button {
-    padding: 24px;
-    width: 343px;
-    height: 67px;
-    background: #d8dfe8;
-    border: 1px solid #0a3871;
-    border-radius: 24px;
-    color: #0a3871;
-    margin: 8px 16px 8px 16px;
-  }
+button {
+  padding: 24px;
+  width: 343px;
+  height: 67px;
+  background: #d8dfe8;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  color: #0a3871;
+  margin: 8px 16px 8px 16px;
+}
 
-  button:hover {
-    color: white;
-    background-color: #0a3871;
-    cursor: pointer;
-  }
+#copyButton {
+  margin: auto;
+  padding: 24px;
+  width: 279px;
+  background-color: white;
+}
 
-  #copyButton {
-    width: 230px
-  }
+button:hover,
+#copyButton:hover {
+  color: white;
+  background-color: #0a3871;
+  cursor: pointer;
+}
 
-  p {
-    height: 18px;
-    font-size: 12px;
-    line-height: 150%;
-    color: #495057;
-    opacity: 0.8;
-  }
+p {
+  height: 18px;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+  opacity: 0.8;
+}
 
-  #encryptParagraph {
-    display: flex;
-    justify-content: start;
-    width: 343px;
-    margin-left: 20px;
-    margin-bottom: 16px;
-  }
+#encryptParagraph {
+  display: flex;
+  justify-content: start;
+  width: 343px;
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
 
-  span {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    font-size: 12px;
-    border-radius: 50%;
-    background-color: #495057;
-    color: white;
-  }
+span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: #495057;
+  color: white;
+}
 
-  #logoAlura {
-    position: absolute;
-    width: 31.09px;
-    height: 48px;
-    left: 40px;
-    top: 40px;
-    padding-bottom: 84px;
-  }
+#logoAlura {
+  position: absolute;
+  width: 31.09px;
+  height: 48px;
+  left: 40px;
+  top: 40px;
+  padding-bottom: 84px;
+}
 
-  /* #logoAlura {
-    display: flex;
-    justify-content: flex-start;
-    width: 31.09px;
-    height: 48px;
-    position: relative;
-    padding-bottom: 80px;
-  } */
+.disabledElement {
+  display: none;
+}
 
-  #decryptImage {
-    display: none;
-  }
+/* #decryptImage {
+  display: none;
+} */
 
-  .disabledElement {
-    display: none;
-  }
+#decryptDiv {
+  /* display: flex;
+  
+  flex-direction: column;
+  justify-content: center;   */
+  box-sizing: border-box;
+  min-height: fit-content;
+  width: 343px;
+  padding: 32px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  background: #ffffff;
+  margin: 40px auto;
+}
 
-  #decryptDiv {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    /* position: relative;
-    top: 8px; */
-    min-height: fit-content;
-    width: 343px;
-    padding: 32px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-    background: #ffffff;
-    margin: 40px 16px;
-    
-  }
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+}
 
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 120%;
-  }
+#textToDecryptArea {
+  /* display: block; */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #495057;
+  margin: 0px 16px;
+  width: 279px;
+  min-height: 180px;
+  margin: auto;
+}
 
-  #decryptDiv {
-    
-  }
-
-  #textToDecrypt {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
-    color: #495057;
-    
-  }
-
+#decryptMessagesDiv {
+  box-sizing: border-box;
+}
 
 @media (min-width: 768px) {
   main {
-    margin: 16px 40px 16px 40px;    
-    }
+    margin: 16px 40px 16px 40px;
+  }
 
   #logoAlura {
     margin-bottom: 120px;
     margin-top: 73.42px;
   }
 
-  #textToEncrypt  {
+  #textToEncryptArea {
     display: block;
     font-size: 32px;
     line-height: 48px;
     width: 688px;
-    margin-top: 240px;    
-    padding: 0px;    
+    margin-top: 240px;
+    padding: 0px;
   }
 
-  #encryptParagraph {   
+  #textToDecryptArea {
+    width: 624px;
+    padding-top: 32px;
+  }
+
+  #encryptParagraph {
     margin-left: 0;
     margin-bottom: 16px;
   }
@@ -180,7 +179,11 @@ body {
     display: flex;
     justify-content: flex-start;
     gap: 24px;
-    
+  }
+
+  #copyButton {
+    width: 624px;
+    margin-bottom: 32px;
   }
 
   #decryptDiv {
@@ -188,82 +191,107 @@ body {
     margin-top: 64px;
     margin-left: 0;
     width: 688px;
-    height: 133px;
+    min-height: 133px;
     padding: 0px;
-    
+  }
+
+  #decryptMessagesDiv {
+    margin-top: 32px;
   }
 }
 
-@media (min-width: 1000px) {   
+@media (min-width: 1000px) {
+  body {
+    height: 60%vh;
+  }
+  main {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 80px;
+    padding: 0px;
+    margin: 0px;
+  }
 
-main {  
-  flex-direction: row;  
-  justify-content: flex-start;
-  gap: 80px;  
-  padding: 0px;
-  margin: 0px;
-}
+  #logoAlura {
+    position: absolute;
+    width: 31.09px;
+    height: 48px;
+    left: 84px;
+    top: 0;
+  }
 
-#logoAlura {
-  position: absolute;
-  width: 31.09px;
-  height: 48px;
-  left: 84px;
-  top: 0;
-}
-
-#textToEncrypt {
-  width: 680px;
-  height: 600px;
-  font-size: 32px;
-  line-height: 48px;
-  /* Dark blue/dark-blue-300 */  
+  #textToEncryptArea {
+    width: 680px;
+    height: 600px;
+    font-size: 32px;
+    line-height: 48px;
+    /* Dark blue/dark-blue-300 */
     margin-top: 168px;
-}
+    margin-bottom: 48px;
+  }
 
-button {  
-  width: 328px; 
-}
+  button,
+  #copyButton {
+    width: 328px;
+  }
 
-#buttonsDiv, #encryptParagraph, #textToEncrypt {
-  margin-left: 120px;
-}
+  #copyButton {
+    position: relative;
+    margin-bottom: 32px;
+  }
 
-#decryptMessages {
-  width: 336px;
-}
-#decryptParagraph {
-  height: 48x;
-  font-size: 16px;
-}
+  #buttonsDiv,
+  #encryptParagraph,
+  #textToEncryptArea {
+    margin-left: 120px;
+  }
 
-#decryptImage {
-  display: block;
-}
+  #decryptMessagesDiv {
+    width: 336px;
+    margin: auto 32px;
+  }
 
-h1 {
-  height: 58px;
-  
-}
+  #decryptParagraph {
+    height: 48x;
+    font-size: 16px;
+  }
 
-#textToDecrypt {
-  height: 781px;
-  font-size: 24px;
-  line-height: 150%;
-  color: #495057;
-  margin-top: 32px;
-}
+  h1 {
+    height: 58px;
+  }
 
-#decryptDiv {   
-  width: 400px;
-  height: 944px; 
-  margin-top: 40px; 
-}
+  #decryptDiv {
+    position: relative;
+    width: 400px;
+    height: 944px;
+    margin: auto 32px;
+    padding-bottom: 32px;
+    /* padding: 243px 32px;
+    gap: 0px; */
+  }
 
-footer {
-  position: relative;
-  margin: auto;
-  text-align: center;
-}
-}
+  #textToDecryptArea {
+    width: 336px;
+    height: 781px;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+    margin-top: 32px;
+  }
 
+  #decryptImage {
+    width: 26.81;
+    height: 23.5;
+    margin-top: 243px;
+  }
+
+  .disabledElement {
+    display: none;
+  }
+
+  footer {
+    position: relative;
+    margin: auto;
+    text-align: center;
+  }
+}
