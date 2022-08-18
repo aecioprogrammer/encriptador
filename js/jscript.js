@@ -35,6 +35,11 @@ function disableElements() {
   }
 }
 
+function validateString(textToValidate) {
+  const textRGEX = /^[a-z]+$/; //áàâãéèêíïóôõöúç ]+$/;
+  return textRGEX.test(textToValidate);
+}
+
 function clickEncryptButton() {
   let buttonEncrypt = document.querySelector("#encryptButton");
   buttonEncrypt.addEventListener("click", handleEncryptButton);
@@ -63,7 +68,16 @@ function handleTextAreas() {
 function handleEncryptButton() {
   let encryptTextAreaValue = document.querySelector("#textToEncryptArea");
   let decryptTextAreaValue = document.querySelector("#textToDecryptArea");
-  let textToEncrypt = encryptTextAreaValue.value.toLowerCase();
+
+  // let textToEncrypt = encryptTextAreaValue.value.toLowerCase();
+  let textToEncrypt = encryptTextAreaValue.value;
+  if (!validateString(textToEncrypt)) {
+    alert(
+      "Só são permitidas letras minúsculas sem acento. Digite novamente!!!"
+    );
+    reset();
+    //textToEncrypt = textToEncrypt.toLowerCase();
+  }
 
   let encryptedText = "";
   for (let char of textToEncrypt) {
