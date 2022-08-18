@@ -63,7 +63,7 @@ function handleTextAreas() {
 function handleEncryptButton() {
   let encryptTextAreaValue = document.querySelector("#textToEncryptArea");
   let decryptTextAreaValue = document.querySelector("#textToDecryptArea");
-  let textToEncrypt = encryptTextAreaValue.value;
+  let textToEncrypt = encryptTextAreaValue.value.toLowerCase();
 
   let encryptedText = "";
   for (let char of textToEncrypt) {
