@@ -17,7 +17,7 @@
         <div>
           <textarea
             name="textToEncrypt"
-            id="textToEncrypt"
+            id="textToEncryptArea"
             cols="30"
             rows="10"
             placeholder="Digite seu texto"
@@ -39,30 +39,33 @@
       <div id="decryptDiv">
         <textarea
           name="textToDecrypt"
-          id="textToDecrypt"
-          class="disabledElement"
+          id="textToDecryptArea"
           cols="30"
           rows="10"
           readonly="true"
-        ></textarea>
-        <figure id="decryptImage" class="disabledElement">
-          <img  src="./imagens/pessoa.png" alt="" />
-        </figure>
+        >
+        </textarea>
 
-        <div id="decryptMessages">
+        <img
+          id="decryptImage"
+          class="disabledElement"
+          src="./imagens/pessoa.png"
+          alt="desenho pessoa"
+        />
+
+        <div id="decryptMessagesDiv">
           <h1>Nenhuma mensagem encontrada</h1>
           <p id="decryptParagraph">
             Digite um texto que você deseja criptografar ou descriptografar
           </p>
         </div>
-        <button id="copyButton" class="disabledElement">Copiar</button>
+
+        <button id="copyButton">Copiar</button>
       </div>
-      
     </main>
     <footer>
       <p>
-        &copy;Desenvolvido por Aécio de Oliveira - Programador Iniciante -
-        2022
+        &copy;Desenvolvido por Aécio de Oliveira - Programador Iniciante - 2022
       </p>
     </footer>
 
