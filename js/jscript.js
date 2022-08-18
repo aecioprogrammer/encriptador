@@ -15,7 +15,6 @@ function disableElements() {
   const decryptTextAreaValue = document.querySelector("#textToDecryptArea");
   const buttonCopy = document.querySelector("#copyButton");
   const pageWidth = document.documentElement.scrollWidth;
-
   const text = encryptTextAreaValue.value;
 
   if (text.length) {
