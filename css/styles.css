@@ -14,16 +14,30 @@ body {
   box-sizing: border-box;
 }
 
+figure {
+  margin-top: 40px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+#logoAlura {
+  position: absolute;
+  width: 31.09px;
+  height: 48px;
+  left: 40px;
+  top: 40px;
+  padding-bottom: 84px;
+  box-sizing: content-box;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0px 16px 40px 16px;
 }
 
 textarea {
   font-size: 32px;
-  /* position: relative; */
   width: 343px;
   margin-top: 152px;
   border: none;
@@ -69,15 +83,23 @@ p {
   opacity: 0.8;
 }
 
-#encryptParagraph {
+/* #encryptParagraph {
   display: flex;
   justify-content: start;
   width: 343px;
   margin-left: 20px;
   margin-bottom: 16px;
+} */
+
+#encryptParagraph {
+  width: 343px;
+  text-align: left;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-span {
+/* span {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -85,17 +107,7 @@ span {
   border-radius: 50%;
   background-color: #495057;
   color: white;
-}
-
-#logoAlura {
-  position: absolute;
-  width: 31.09px;
-  height: 48px;
-  left: 40px;
-  top: 40px;
-  padding-bottom: 84px;
-  box-sizing: content-box;
-}
+} */
 
 .disabledElement {
   display: none;
@@ -105,11 +117,10 @@ span {
   display: none;
 } */
 
-#decryptDiv {
-  /* display: flex;
-  
+#decrypt {
+  display: flex;
   flex-direction: column;
-  justify-content: center;   */
+  justify-content: center;
   box-sizing: border-box;
   min-height: fit-content;
   width: 343px;
@@ -168,7 +179,7 @@ h1 {
 
   #encryptParagraph {
     margin-left: 0;
-    margin-bottom: 16px;
+    min-width: 624px;
   }
 
   button {
@@ -180,6 +191,7 @@ h1 {
     display: flex;
     justify-content: flex-start;
     gap: 24px;
+    min-width: 624px;
   }
 
   #copyButton {
@@ -187,7 +199,7 @@ h1 {
     margin-bottom: 32px;
   }
 
-  #decryptDiv {
+  #decrypt {
     flex-direction: start;
     margin-top: 64px;
     margin-left: 0;
@@ -197,36 +209,48 @@ h1 {
   }
 
   #decryptMessagesDiv {
-    margin-top: 32px;
+    margin: 32px;
+    min-width: 624px;
+  }
+
+  #decryptMessagesDiv p {
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1000px) {
   body {
-    height: 60%vh;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
   }
   main {
     flex-direction: row;
     justify-content: flex-start;
     gap: 80px;
     padding: 0px;
-    margin: 0px;
+  }
+
+  header {
+    position: absolute;
   }
 
   #logoAlura {
-    position: absolute;
+    position: relative;
     width: 31.09px;
     height: 48px;
     left: 84px;
     top: 0;
+    margin: 0;
   }
 
   #textToEncryptArea {
+    position: relative;
     width: 680px;
     height: 600px;
     font-size: 32px;
     line-height: 48px;
-    /* Dark blue/dark-blue-300 */
     margin-top: 168px;
     margin-bottom: 48px;
   }
@@ -236,24 +260,19 @@ h1 {
     width: 328px;
   }
 
-  #copyButton {
-    position: relative;
-    margin-bottom: 32px;
-  }
-
   #buttonsDiv,
   #encryptParagraph,
   #textToEncryptArea {
-    margin-left: 120px;
+    margin-left: 240px;
   }
 
   #decryptMessagesDiv {
-    width: 336px;
+    min-width: 336px;
     margin: auto 32px;
   }
 
   #decryptParagraph {
-    height: 48x;
+    height: 48px;
     font-size: 16px;
   }
 
@@ -261,29 +280,25 @@ h1 {
     height: 58px;
   }
 
-  #decryptDiv {
-    position: relative;
+  #decrypt {
+    /* position: relative; */
     width: 400px;
     height: 944px;
-    margin: auto 32px;
-    padding-bottom: 32px;
-    /* padding: 243px 32px;
-    gap: 0px; */
+    margin: 40px 32px;
   }
 
   #textToDecryptArea {
     width: 336px;
-    height: 781px;
+    height: 681px;
     font-size: 24px;
     line-height: 150%;
     color: #495057;
-    margin-top: 32px;
   }
 
   #decryptImage {
     width: 26.81;
     height: 23.5;
-    margin-top: 243px;
+    /* margin-top: 243px; */
   }
 
   .disabledElement {

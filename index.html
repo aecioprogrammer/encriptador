@@ -5,38 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Decodificador de textos</title>
   </head>
 
   <body>
-    <main>
+    <header>
       <figure>
         <img id="logoAlura" src="./imagens/logo.png" alt="logo alura" />
       </figure>
-      <div id="encryptDiv">
-        <div>
-          <textarea
-            name="textToEncrypt"
-            id="textToEncryptArea"
-            cols="30"
-            rows="10"
-            placeholder="Digite seu texto"
-          ></textarea>
-        </div>
+    </header>
 
-        <div>
-          <p id="encryptParagraph">
-            <span>!</span> Apenas letras minúsculas sem acento
-          </p>
-        </div>
+    <main>
+      <section id="encrypt">
+        <textarea
+          name="textToEncrypt"
+          id="textToEncryptArea"
+          cols="30"
+          rows="10"
+          placeholder="Digite seu texto"
+        ></textarea>
+
+        <p id="encryptParagraph">
+          <!-- <span>!</span> Apenas letras minúsculas sem acento -->
+          <i style="font-size: 16px" class="fa">&#xf06a;</i> Apenas letras
+          minúsculas sem acento
+        </p>
 
         <div id="buttonsDiv">
           <button id="encryptButton">Criptografar</button>
           <button id="decryptButton">Descriptografar</button>
         </div>
-      </div>
+      </section>
 
-      <div id="decryptDiv">
+      <section id="decrypt">
         <textarea
           name="textToDecrypt"
           id="textToDecryptArea"
@@ -46,14 +51,14 @@
         >
         </textarea>
 
-        <img
-          id="decryptImage"
-          class="disabledElement"
-          src="./imagens/pessoa.png"
-          alt="desenho pessoa"
-        />
-
         <div id="decryptMessagesDiv">
+          <img
+            id="decryptImage"
+            class="disabledElement"
+            src="./imagens/pessoa.png"
+            alt="desenho pessoa"
+          />
+
           <h1>Nenhuma mensagem encontrada</h1>
           <p id="decryptParagraph">
             Digite um texto que você deseja criptografar ou descriptografar
@@ -61,8 +66,9 @@
         </div>
 
         <button id="copyButton">Copiar</button>
-      </div>
+      </section>
     </main>
+
     <footer>
       <p>
         &copy;Desenvolvido por Aécio de Oliveira - Programador Iniciante - 2022
