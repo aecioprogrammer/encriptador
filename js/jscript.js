@@ -1,9 +1,6 @@
 let chave = ["ai", "enter", "imes", "ober", "ufat"];
 
 function start() {
-  const pageWidth = document.documentElement;
-  console.log(pageWidth);
-  pageWidth.addEventListener("onchange", disableElements);
   reset();
   clearTextArea();
   clickEncryptButton();

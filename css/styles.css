@@ -11,7 +11,6 @@ body {
   font-weight: 400;
   text-align: center;
   background-color: #e5e5e5;
-  box-sizing: border-box;
 }
 
 figure {
@@ -82,14 +81,6 @@ p {
   opacity: 0.8;
 }
 
-/* #encryptParagraph {
-  display: flex;
-  justify-content: start;
-  width: 343px;
-  margin-left: 20px;
-  margin-bottom: 16px;
-} */
-
 #encryptParagraph {
   width: 343px;
   text-align: left;
@@ -98,23 +89,9 @@ p {
   margin-right: auto;
 }
 
-/* span {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  font-size: 12px;
-  border-radius: 50%;
-  background-color: #495057;
-  color: white;
-} */
-
 .disabledElement {
   display: none;
 }
-
-/* #decryptImage {
-  display: none;
-} */
 
 #decrypt {
   display: flex;
@@ -137,7 +114,6 @@ h1 {
 }
 
 #textToDecryptArea {
-  /* display: block; */
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -160,6 +136,7 @@ h1 {
   #logoAlura {
     margin-bottom: 120px;
     margin-top: 73.42px;
+    margin: 40px;
   }
 
   #textToEncryptArea {
@@ -281,7 +258,6 @@ h1 {
   }
 
   #decrypt {
-    /* position: relative; */
     width: 400px;
     height: 944px;
     margin: 40px 32px;
@@ -298,7 +274,6 @@ h1 {
   #decryptImage {
     width: 26.81;
     height: 23.5;
-    /* margin-top: 243px; */
   }
 
   .disabledElement {
