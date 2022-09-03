@@ -1,5 +1,23 @@
 let chave = ["ai", "enter", "imes", "ober", "ufat"];
 
+// let pageWidth = window.innerWidth;
+
+// window.addEventListener("resize", function () {
+//   pageWidth = window.innerWidth;
+
+//   if (pageWidth >= 1000) {
+//     imageDecrypt.classList.remove("disabledElement");
+//   }
+
+//   console.log(pageWidth);});
+
+//   window.onresize = function() {
+//     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+//     if (w < 800) {
+//         //executar o código aqui dentro
+//     }
+// };
+
 function start() {
   reset();
   clearTextArea();
@@ -69,14 +87,12 @@ function handleEncryptButton() {
   let encryptTextAreaValue = document.querySelector("#textToEncryptArea");
   let decryptTextAreaValue = document.querySelector("#textToDecryptArea");
 
-  // let textToEncrypt = encryptTextAreaValue.value.toLowerCase();
   let textToEncrypt = encryptTextAreaValue.value;
   if (!validateString(textToEncrypt)) {
     alert(
       "Só são permitidas letras minúsculas sem acento. Digite novamente!!!"
     );
     reset();
-    //textToEncrypt = textToEncrypt.toLowerCase();
   }
 
   let encryptedText = "";
