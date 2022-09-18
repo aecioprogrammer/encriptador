@@ -81,11 +81,11 @@ p {
 }
 
 #encryptParagraph {
+  display: flex;
+  justify-content: start;
   width: 343px;
-  text-align: left;
+  /* margin-left: 20px; */
   margin-bottom: 16px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
