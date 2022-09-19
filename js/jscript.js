@@ -6,28 +6,32 @@ function start() {
   clickEncryptButton();
   clickDecryptButton();
   clickCopyButton();
+  WindowResizeListener();
+}
+
+function WindowResizeListener() {
+  window.addEventListener("resize", function () {
+    const imageDecrypt = document.querySelector("#decryptImage");
+    if (window.innerWidth >= 1000) {
+      imageDecrypt.classList.remove("disabledElement");
+    } else {
+      imageDecrypt.classList.add("disabledElement");
+    }
+  });
 }
 
 function disableElements() {
   const encryptTextAreaValue = document.querySelector("#textToEncryptArea");
-  const imageDecrypt = document.querySelector("#decryptImage");
   const divDecryptMessages = document.querySelector("#decryptMessagesDiv");
   const decryptTextAreaValue = document.querySelector("#textToDecryptArea");
   const buttonCopy = document.querySelector("#copyButton");
-  const pageWidth = document.documentElement.scrollWidth;
   const text = encryptTextAreaValue.value;
 
   if (text.length) {
-    if (pageWidth >= 1000) {
-      imageDecrypt.classList.add("disabledElement");
-    }
     divDecryptMessages.classList.add("disabledElement");
     decryptTextAreaValue.classList.remove("disabledElement");
     buttonCopy.classList.remove("disabledElement");
   } else if (!text.length) {
-    if (pageWidth >= 1000) {
-      imageDecrypt.classList.remove("disabledElement");
-    }
     divDecryptMessages.classList.remove("disabledElement");
     decryptTextAreaValue.classList.add("disabledElement");
     buttonCopy.classList.add("disabledElement");
