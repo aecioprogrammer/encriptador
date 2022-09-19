@@ -31,7 +31,6 @@ figure {
 
 main {
   position: relative;
-  left: 16px;
 }
 
 textarea {
@@ -81,12 +80,9 @@ p {
   opacity: 0.8;
 }
 
-#encryptParagraph {
+#encryptMessageParagraph {
   width: 343px;
   text-align: left;
-  margin-bottom: 16px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .disabledElement {
@@ -153,7 +149,7 @@ h1 {
     padding-top: 32px;
   }
 
-  #encryptParagraph {
+  #encryptMessageParagraph {
     margin-left: 0;
     min-width: 624px;
   }
@@ -229,16 +225,17 @@ h1 {
     font-size: 32px;
     line-height: 48px;
     margin-top: 168px;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
   }
 
   button,
   #copyButton {
     width: 328px;
+    margin-bottom: 32px;
   }
 
   #buttonsDiv,
-  #encryptParagraph,
+  #encryptMessageParagraph,
   #textToEncryptArea {
     margin-left: 240px;
   }
