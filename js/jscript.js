@@ -1,4 +1,4 @@
-let chave = ["ai", "enter", "imes", "ober", "ufat"];
+const chave = ["ai", "enter", "imes", "ober", "ufat"];
 
 function start() {
   reset();
@@ -18,7 +18,6 @@ function disableElements() {
   const text = encryptTextAreaValue.value;
 
   if (text.length) {
-    console.log("não exibe imagem");
     if (pageWidth >= 1000) {
       imageDecrypt.classList.add("disabledElement");
     }
@@ -35,28 +34,23 @@ function disableElements() {
   }
 }
 
-function validateString(textToValidate) {
-  const textRGEX = /^[a-z]+$/g; //áàâãéèêíïóôõöúç ]+$/;
-  return textRGEX.test(textToValidate);
-}
-
 function clickEncryptButton() {
-  let buttonEncrypt = document.querySelector("#encryptButton");
+  const buttonEncrypt = document.querySelector("#encryptButton");
   buttonEncrypt.addEventListener("click", handleEncryptButton);
 }
 
 function clickDecryptButton() {
-  let buttonDecrypt = document.querySelector("#decryptButton");
+  const buttonDecrypt = document.querySelector("#decryptButton");
   buttonDecrypt.addEventListener("click", handleDecryptButton);
 }
 
 function clickCopyButton() {
-  let buttonCopy = document.querySelector("#copyButton");
+  const buttonCopy = document.querySelector("#copyButton");
   buttonCopy.addEventListener("click", handleCopyButton);
 }
 
 function clearTextArea() {
-  let textArea = document.querySelector("#textToEncryptArea");
+  const textArea = document.querySelector("#textToEncryptArea");
   textArea.addEventListener("click", handleTextAreas);
 }
 
@@ -65,14 +59,14 @@ function handleTextAreas() {
 }
 
 function handleEncryptButton() {
-  let encryptTextAreaValue = document.querySelector("#textToEncryptArea");
-  let decryptTextAreaValue = document.querySelector("#textToDecryptArea");
+  const encryptTextAreaValue = document.querySelector("#textToEncryptArea");
+  const decryptTextAreaValue = document.querySelector("#textToDecryptArea");
 
   let textToEncrypt = encryptTextAreaValue.value;
   if (!validateString(textToEncrypt)) {
-    alert(
-      "Só são permitidas letras minúsculas sem acento. Digite novamente!!!"
-    );
+    //
+    showModal();
+    window.addEventListener("click", handleWindowListener);
     reset();
   }
 
@@ -86,15 +80,15 @@ function handleEncryptButton() {
 }
 
 function handleDecryptButton() {
-  let encryptTextArea = document.querySelector("#textToEncryptArea");
-  let decryptTextArea = document.querySelector("#textToDecryptArea");
-  let textToDecrypt = decryptText(encryptTextArea.value);
+  const encryptTextArea = document.querySelector("#textToEncryptArea");
+  const decryptTextArea = document.querySelector("#textToDecryptArea");
+  const textToDecrypt = decryptText(encryptTextArea.value);
   decryptTextArea.value = textToDecrypt;
   disableElements();
 }
 
 function handleCopyButton() {
-  let decryptTextArea = document.querySelector("#textToDecryptArea");
+  const decryptTextArea = document.querySelector("#textToDecryptArea");
   decryptTextArea.select();
   decryptTextArea.setSelectionRange(0, 99999);
   document.execCommand("copy");
@@ -125,9 +119,33 @@ function decryptText(text) {
     .replaceAll(chave[4], "u");
 }
 
+function validateString(textToValidate) {
+  const textRGEX = /^[a-z]+$/g; //áàâãéèêíïóôõöúç ]+$/;
+  return textRGEX.test(textToValidate);
+}
+
+function showModal() {
+  const modal = document.querySelector(".modal");
+  modal.classList.remove("disabledElement");
+}
+
+function disableModal() {
+  const modal = document.querySelector(".modal");
+  modal.classList.add("disabledElement");
+  window.removeEventListener("click", handleWindowListener);
+}
+
+function handleWindowListener(Event) {
+  const modal = document.querySelector(".modal");
+  console.log(Event.target);
+  if (Event.target == modal) {
+    disableModal();
+  }
+}
+
 function reset() {
-  let encryptTextArea = document.querySelector("#textToEncryptArea");
-  let decryptTextArea = document.querySelector("#textToDecryptArea");
+  const encryptTextArea = document.querySelector("#textToEncryptArea");
+  const decryptTextArea = document.querySelector("#textToDecryptArea");
   encryptTextArea.value = "";
   decryptTextArea.value = "";
   disableElements();
