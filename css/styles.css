@@ -30,6 +30,7 @@ figure {
 
 main {
   position: relative;
+  padding: 8px;
 }
 
 textarea {
@@ -48,7 +49,7 @@ textarea::placeholder {
 
 button {
   padding: 24px;
-  width: 343px;
+  width: 323px;
   height: 67px;
   background: #d8dfe8;
   border: 1px solid #0a3871;
@@ -80,7 +81,7 @@ p {
 }
 
 #encryptMessageParagraph {
-  width: 343px;
+  width: 323px;
   text-align: left;
 }
 
@@ -122,6 +123,38 @@ h1 {
 
 #decryptMessagesDiv {
   box-sizing: border-box;
+}
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  vertical-align: center;
+}
+
+.modal .content {
+  background-color: #e5e5e5;
+  width: 80%;
+  min-height: 25%;
+  margin: 80% auto;
+  padding: 24px;
+  border-radius: 30px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.modal .content p {
+  font-size: 16px;
+  text-align: center;
+  height: auto;
 }
 
 footer {
