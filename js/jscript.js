@@ -1,23 +1,5 @@
 let chave = ["ai", "enter", "imes", "ober", "ufat"];
 
-// let pageWidth = window.innerWidth;
-
-// window.addEventListener("resize", function () {
-//   pageWidth = window.innerWidth;
-
-//   if (pageWidth >= 1000) {
-//     imageDecrypt.classList.remove("disabledElement");
-//   }
-
-//   console.log(pageWidth);});
-
-//   window.onresize = function() {
-//     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-//     if (w < 800) {
-//         //executar o código aqui dentro
-//     }
-// };
-
 function start() {
   reset();
   clearTextArea();
@@ -54,7 +36,7 @@ function disableElements() {
 }
 
 function validateString(textToValidate) {
-  const textRGEX = /^[a-z]+$/; //áàâãéèêíïóôõöúç ]+$/;
+  const textRGEX = /^[a-z]+$/g; //áàâãéèêíïóôõöúç ]+$/;
   return textRGEX.test(textToValidate);
 }
 
@@ -80,7 +62,6 @@ function clearTextArea() {
 
 function handleTextAreas() {
   reset();
-  //disableElements();
 }
 
 function handleEncryptButton() {

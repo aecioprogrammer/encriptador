@@ -9,7 +9,6 @@ body {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
-  text-align: center;
   background-color: #e5e5e5;
 }
 
@@ -100,7 +99,8 @@ p {
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
   background: #ffffff;
-  margin: 40px auto;
+  margin: 40px 0;
+  text-align: center;
 }
 
 h1 {
@@ -122,6 +122,10 @@ h1 {
 
 #decryptMessagesDiv {
   box-sizing: border-box;
+}
+
+footer {
+  text-align: center;
 }
 
 @media (min-width: 768px) {
